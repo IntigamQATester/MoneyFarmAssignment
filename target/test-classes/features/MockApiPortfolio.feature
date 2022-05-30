@@ -23,5 +23,25 @@ And json body should contain all existing datas
       And response body is "bad request"
       Then status code is 400
 
+  @addPortfolio
+  Scenario: Add a new portfolio
+    Given a valid risklevel 3.4
+    When I create the new portfolio with name "10" using access token
+    Then the status code should be 200
+    And I should have a new portfolio with name "10"
+
+  @get
+  Scenario: Retrieve portfolios with token
+    Given get request is sent to retrieve the whole portfolio
+    Then the status code should be 200
+    And the first portfolio name is "Portfolio 1"
+    And the portfolio "id" must be different for different portfolio
+
+  @get
+  Scenario: Retrieve portfolios without token
+    Given get request is sent without token
+    Then the status code should be 401
+    Then the response has the message "Authorization header required"
+
 
 

@@ -1,0 +1,65 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-05-30T14:02:08.573Z",
+        "line": 14,
+        "name": "Add funds in an existing portfolio",
+        "description": "",
+        "id": "add-funds-to-an-existing-portfolio;add-funds-in-an-existing-portfolio",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 15,
+            "name": "a valid id \"c3c0d314-e4f8-4aae-8af9-faa71382f2fb\" of an existing portfolio",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 16,
+            "name": "I post the amount of 101  to the existing id with access token",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 17,
+            "name": "the status code should be 200",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 18,
+            "name": "the portfolio amount should have been 101",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@addFunds"
+          }
+        ]
+      }
+    ],
+    "name": "Add funds to an existing portfolio",
+    "description": "",
+    "id": "add-funds-to-an-existing-portfolio",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/MockApiFunds.feature",
+    "tags": []
+  }
+]
